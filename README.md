@@ -1,1 +1,1 @@
-# Algusn desenvolvimentos legais ;)
+# Alguns desenvolvimentos legais ;)
