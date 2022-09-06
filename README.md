@@ -20,7 +20,7 @@
 
 ## Como rodar:
 
-1.1 - Primeiro iremos nos certificar de que o python está instalado na sua útima versão, e se as bibliotecas estão instaladas.
+1.1 - Primeiro iremos nos certificar de que o <b> Python </b>está instalado na sua útima versão, e suas bibliotecas.
 <ul>
   <li>Selenium </li>
   <li>Webdriver </li>
