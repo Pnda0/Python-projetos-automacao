@@ -40,6 +40,26 @@
 
 4.0 - E por último e não menos importante, o link do site que vamos realizar na nossa função.
 
+<h1>  🤖 2# Bot Telegram. </h1>
+
+> Status: Funcionando. <br>
+
+## Tecnologias Usadas:
+ <table>
+ <tr>
+    <td> Python </td>
+    <td> Bot Api </td>
+    <td> Requests <td>
+  </tr>
+  <tr>
+    <td> 3.10.5 </td>
+    <td> Botfather </td>
+    <td> 2.28 </td>
+  </tr>
+ </table>
+
+
+
 
 
 
