@@ -49,7 +49,7 @@
  <tr>
     <td> Python </td>
     <td> Bot Api </td>
-    <td> Requests <td>
+    <td> Requests </td>
   </tr>
   <tr>
     <td> 3.10.5 </td>
@@ -57,6 +57,12 @@
     <td> 2.28 </td>
   </tr>
  </table>
+ 
+ <O Bot do telegram neste caso, foi criado na intenção de enviar mensagens automáticas após determinado while ter sido completado. Com o intuíto de ter atualizações em tempo real.
+ 
+ ## Como rodar:
+ 
+ 
 
 
 
