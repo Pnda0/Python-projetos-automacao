@@ -28,7 +28,7 @@
   <li> By</li>
 </ul> 
 
-  1.2 - Agora precisamos conferir onde o nosso arquivo  <b>chromedriver.exe</b> está armazenado, ( é importante verificar a ultima versão do seu chrome e acessar o site do chromedriver e baixar a versão correspondente: https://chromedriver.chromium.org/downloads.
+  1.2 - Agora precisamos conferir onde o nosso arquivo  <b>chromedriver.exe</b> está armazenado, ( é importante verificar a ultima versão do seu chrome e acessar o site do <b>chromedriver</b> e baixar a versão correspondente: https://chromedriver.chromium.org/downloads.)
 
   1.3 - Fica de fácil organização deixa-lo na mesma pasta em que o arquivo <b>.py </b> está.
 
