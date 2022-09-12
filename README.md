@@ -58,7 +58,7 @@
   </tr>
  </table>
  
- <O Bot do telegram neste caso, foi criado na intenção de enviar mensagens automáticas após determinado while ter sido completado. Com o intuíto de ter atualizações em tempo real.
+ O Bot do telegram neste caso, foi criado na intenção de enviar mensagens automáticas após determinado while ter sido completado. Com o intuíto de ter atualizações em tempo real.
  
  ## Como rodar:
  
