@@ -1,11 +1,5 @@
 # Alguns desenvolvimentos legais ;)
 
-<style> 
-.imagem{
- width=120px;
- height=100px;
- }
-</style>
 
 <h1>  ✂️ 1# Print de Tela. </h1>
 
