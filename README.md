@@ -48,7 +48,7 @@
  <table>
  <tr>
     <td> Python </td>
-    <td> Bot Api </td>
+    <td> Telegram Bot </td>
     <td> Requests </td>
   </tr>
   <tr>
