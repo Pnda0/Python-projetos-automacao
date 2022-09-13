@@ -14,6 +14,9 @@
     <td> 3.10.5 </td>
     <td> 4.3 </td>
   </tr>
+ <tr>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
+  </tr>
  </table>
 <br> 
 <b>O print de tela foi desenvolvido com o foco em aplicações Web, no intuito de printar uma pagina ou pixel desejado.</b> 
