@@ -1,5 +1,12 @@
 # Alguns desenvolvimentos legais ;)
 
+<style> 
+.img{
+ width=120px;
+ height=100px;
+ }
+</style>
+
 <h1>  ✂️ 1# Print de Tela. </h1>
 
 > Status: Funcionando. <br>
