@@ -1,7 +1,7 @@
 # Alguns desenvolvimentos legais ;)
 
 <style> 
-.img{
+.imagem{
  width=120px;
  height=100px;
  }
@@ -22,7 +22,7 @@
     <td> 4.3 </td>
   </tr>
  <tr>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
+    <img class='imagem' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
   </tr>
  </table>
 <br> 
