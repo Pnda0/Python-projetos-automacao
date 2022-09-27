@@ -4,12 +4,6 @@ import locale
 from threading import local
 from datetime import time
 
-# Parte 1
-
-
-# Parte 2
-
-
 
 while True:
     agora = datetime.now()
