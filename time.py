@@ -59,24 +59,51 @@ print(last_month)
 
 # Trabalhando com horas
 
+
 relogio = time.fromisoformat('14:00')
 print(relogio)
-
 
 agora = datetime.now()
 print(agora)
 
+# Formatando hora
 t = agora.strftime('%H:%M')
 print(t)
 
+# Substituindo a hora, pelo horário desejado
 t2 = agora.replace(hour=15, minute=3)
 print(t2)
+
 
 t_simplificado = t2.strftime('%H:%M')
 print(t_simplificado)
 
-#while True:
-    #if t == 
+# Data de hoje
+
+hoje = datetime.today()
+
+# Formatando a data
+
+data_de_hoje = hoje.strftime('%d%m%Y')
+
+# usando o time delta para definir quantos dias desejamos somar ou subtrair
+
+today = hoje - timedelta(days=20)
+
+# Formatando a data de hoje após ser transformada em timedelta
+data_comeco = today.strftime('%d%m%Y')
+
+# Utilizando um while para finalizar execução do código a x hora.
+while True:
+    agora = datetime.now()
+    t = agora.strftime('%H:%M')
+    t2 = agora.replace(hour=18, minute=0)
+    t_simplificado = t2.strftime('%H:%M')
+    if t == t_simplificado:
+        print('Se acabou')
+        break
+
+
 
 
 
