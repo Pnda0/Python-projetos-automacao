@@ -5,19 +5,25 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 from imap_tools import MailBox, AND
-
+from email.mime.base import MIMEBase
+from email import encoders
 
 # DADOS
 
-email_from = 'seuemail.com.br'
-email_password = 'senha do seu email'
+data_ini = '19/10'
+data_fim = '30/10'
+
+email_from = 'seu email'
+email_password = 'sua senha'
 email_smtp_server = 'smtp.office365.com'
 
 # Destino
-destination = ['email que voce deseja enviar uma mensagem']
+destination = ['email do destino']
 
 # Assunto
-subject = 'Novidades em breve :)'
+subject = 'Assunto'
+
+
 
 # Formatar cabeçalho do e-mail
 msg = MIMEMultipart()
@@ -25,14 +31,26 @@ msg['From'] = email_from
 msg['Subject'] = subject
 
 # Corpo do e-mail
-text = '''Bom dia!
-há um bom tempo que não faço vídeos, mas estou empolgado XD'''
+text = f'''Corpo do e-mail'''
 
 # Habilitando formato HTML
 msg_text = MIMEText(text, 'html')
 
 # Anexando a mensagem
 msg.attach(msg_text)
+
+# Anexando Planilha
+anexo = r'C:\Users\Padrao\Downloads\excel.xlsx'
+attachment = open(anexo, 'rb')
+
+att = MIMEBase('aplication', 'octet-stream')
+att.set_payload(attachment.read())
+encoders.encode_base64(att)
+
+att.add_header('Content-Disposition',f'attachment; filename=dfpronto22.xlsx')
+attachment.close()
+msg.attach(att)
+
 
 try:
     # Enviando
@@ -57,4 +75,8 @@ try:
     print('E-mail enviado!')
 except Exception as erro:
     print(f'Falha ao enviar e-mail:{erro}')
+
+
+
+
 
