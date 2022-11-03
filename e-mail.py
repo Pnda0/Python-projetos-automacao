@@ -39,16 +39,19 @@ msg_text = MIMEText(text, 'html')
 # Anexando a mensagem
 msg.attach(msg_text)
 
-# Anexando Planilha
+# Abrindo Planilha em excel
 anexo = r'C:\Users\Padrao\Downloads\excel.xlsx'
 attachment = open(anexo, 'rb')
 
+# Lendo planilha em encode 64
 att = MIMEBase('aplication', 'octet-stream')
 att.set_payload(attachment.read())
 encoders.encode_base64(att)
 
+# Adicionando um cabeçalho ao anexo
 att.add_header('Content-Disposition',f'attachment; filename=dfpronto22.xlsx')
 attachment.close()
+# Anexando de fato
 msg.attach(att)
 
 
