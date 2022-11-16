@@ -10,8 +10,6 @@ from email import encoders
 
 # DADOS
 
-data_ini = '19/10'
-data_fim = '30/10'
 
 email_from = 'seu email'
 email_password = 'sua senha'
@@ -27,7 +25,7 @@ subject = 'Assunto'
 msg = MIMEMultipart()
 msg['From'] = email_from
 msg['Subject'] = subject
-
+msg['To'] = 'emaildoremetente@hotmail.com'
 # Corpo do e-mail
 text = f'''Corpo do e-mail'''
 
@@ -69,7 +67,7 @@ try:
     smtp.login(email_from, email_password)
 
     # Enviar 
-    smtp.sendmail(email_from, ','.join(destination), msg.as_string())
+    smtp.sendmail(email_from, msg['To'], msg.as_string())
 
     # Encerrar conexão
     smtp.quit()
