@@ -23,8 +23,6 @@ destination = ['email do destino']
 # Assunto
 subject = 'Assunto'
 
-
-
 # Formatar cabeçalho do e-mail
 msg = MIMEMultipart()
 msg['From'] = email_from
