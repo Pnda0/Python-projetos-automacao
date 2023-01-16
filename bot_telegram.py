@@ -6,8 +6,8 @@ import os
 from datetime import datetime
 
 # Acesso ao grupo e Robo
-token = '5360566736:AAEJ2xv0eOPJMYtE23aimJM96LGFW90x8Ws'
-chat_id = -837533517 
+token = 'seu TOken'
+chat_id = 'seu id' 
 
 url = (f'https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}')
 
