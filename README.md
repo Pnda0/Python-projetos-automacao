@@ -16,7 +16,7 @@
     <td> 4.3 </td>
   </tr>
  <tr>
-    <img class='imagem' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
+    <img class='imagem' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" width="200px height="200px" "/>
   </tr>
  </table>
 <br> 
