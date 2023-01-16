@@ -1,12 +1,11 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-import time
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import requests
-import time
+import telegram
 
 def getscreenshotofurl(url):
     service2 = Service(ChromeDriverManager().install())
@@ -27,7 +26,7 @@ time.sleep(5)
 
 base_url = 'https://api.telegram.org/bot5360566736:AAEJ2xv0eOPJMYtE23aimJM96LGFW90x8Ws/sendPhoto'
 
-my_file = open(r'C:\Users\Alan\Downloads\Alan\Python\AD Python\AD-Promotora\Atendimento\Captcha_BMG.png', 'rb')
+my_file = open(r'C:\Users\Alan\Downloads\Alan\Python\PYTHON\Python\Captcha_BMG.png', 'rb')
 
 parametros = {
     "chat_id" : "-837533517",
@@ -42,7 +41,24 @@ resp = requests.get(base_url, data=parametros, files=files)
 print(resp.text)
 print('Foto Enviada')
     
+# Inicializa o bot usando o token fornecido
+bot = telegram.Bot(token='5360566736:AAEJ2xv0eOPJMYtE23aimJM96LGFW90x8Ws')
 
+# Identificador do grupo
+chat_id = -837533517
+
+# Inicializa uma lista vazia para armazenar as mensagens
+messages = []
+
+# Obtém as últimas 100 mensagens do grupo
+for i in range(100):
+    msg = bot.getUpdates()[i].message
+    if msg.chat.id == chat_id:
+        messages.append(msg.text)
+
+# Exibe as mensagens coletadas
+for message in messages:
+    print(message)
 
 
 
