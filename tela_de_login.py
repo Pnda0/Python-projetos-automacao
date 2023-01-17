@@ -1,15 +1,9 @@
-import requests
-from bs4 import BeautifulSoup, BeautifulStoneSoup
-from selenium import webdriver
-from openpyxl import Workbook, load_workbook
-import os
-from datetime import datetime
 import tkinter as tk 
 
-#criando a janelas
+#criando a janela
 janela = tk.Tk()
-janela.title("Esteira AD")
-janela.geometry("250x150")
+janela.title("Tela de Login")
+janela.geometry("300x200")
 
 #criando as variáveis
 login_input = tk.StringVar()
@@ -17,17 +11,17 @@ senha_input = tk.StringVar()
 
 #criando as labels
 login_label = tk.Label(janela, text = "Login:")
-login_label.place(x = 10, y = 10)
+login_label.place(x = 20, y = 10)
 
 senha_label = tk.Label(janela, text = "Senha:")
-senha_label.place(x = 10, y = 40)
+senha_label.place(x = 20, y = 50)
 
 #criando os campos de entrada
 login_entry = tk.Entry(janela, textvariable = login_input)
-login_entry.place(x = 70, y = 10, width = 150)
+login_entry.place(x = 70, y = 10, width = 200)
 
 senha_entry = tk.Entry(janela, textvariable = senha_input, show = "*")
-senha_entry.place(x = 70, y = 50, width = 150)
+senha_entry.place(x = 70, y = 50, width = 200)
 
 #função para verificar login e senha
 def verificar():
@@ -40,20 +34,6 @@ def verificar():
 
 #criando o botão 
 botao = tk.Button(janela, text = "Entrar", command = verificar)
-botao.place(x = 80, y = 90, width = 80)
+botao.place(x = 120, y = 80, width = 80)
 
 janela.mainloop()
-
-
-# Acesso ao grupo e Robo
-token = '5360566736:AAEJ2xv0eOPJMYtE23aimJM96LGFW90x8Ws'
-chat_id = '-837533517' 
-
-url = (f'https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}/sendMessage')
-
-messages = ['Fala ai brow']
-
-# enviando a mensagem
-req = requests.post(url)
-print(req)
-
