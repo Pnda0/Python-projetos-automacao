@@ -6,23 +6,14 @@ import os
 from datetime import datetime
 
 # Acesso ao grupo e Robo
-token = 'seu TOken'
-chat_id = 'seu id' 
+token = 'seu Token'
+chat_id = 'seu chat-id' 
 
 url = (f'https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}')
 
-messages = []
+messages = ['Escreva sua mensagem aqui']
 
-# Mensagem enviada
-for update in url.getUpdates():
-    if update.message and update.message.chat.id == chat_id:
-        messages.append(update.message)
-
-# Formatando o envio das mensagens
-
-# Now you have a list of messages from the group
-for message in messages:
-    print(message.text)
-
-
+# enviando a mensagem
+req = requests.post(url)
+print(req)
 

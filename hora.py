@@ -6,9 +6,12 @@ from datetime import time
 
 
 while True:
+    # Data e hora de hoje de acordo com seu sistema operacional
     agora = datetime.now()
+    # Definindo a variável tempo e formatando somente com o desejado, no nosso caso hora e minuto
     t = agora.strftime('%H:%M')
-    t2 = agora.replace(hour=10, minute=31)
+    # Agora substituindo a hora atual com a hora que desejamos 
+    t2 = agora.replace(hour=21, minute=4)
     t_simplificado = t2.strftime('%H:%M')
 
     if t >= t_simplificado:
