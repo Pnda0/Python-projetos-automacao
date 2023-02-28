@@ -9,9 +9,7 @@ bet = webdriver.Chrome(service=service)
 
 
 
-
-
-string = """Usuario meNSAGEM🎮 FIFA-Canal do BrunoApostador ®🎮
+string = """Usuario MENNSAGEM🎮 FIFA-Canal do BrunoApostador ®🎮
             
 ⚽️ Votizlove vs Makcwelllm 🔼 
 (Chelsea vs Barcelona)
