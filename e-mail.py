@@ -10,7 +10,6 @@ from email import encoders
 
 # DADOS
 
-
 email_from = 'seu email'
 email_password = 'sua senha'
 email_smtp_server = 'smtp.office365.com'
