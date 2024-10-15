@@ -3,13 +3,13 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 # Informações do remetente e do destinatário
-email_de = "seu_email@gmail.com"
+email_de = "seu_email@outlook.com"
 email_para = "destinatario_email@gmail.com"
 senha = "sua_senha"
 
 # Criação da mensagem
 assunto = "Assunto do E-mail"
-corpo = "Olá, esta é uma mensagem simples enviada por Python."
+corpo = "Olá, esta é uma mensagem simples enviada por Python via Outlook."
 
 # Configuração da mensagem MIME
 msg = MIMEMultipart()
@@ -20,9 +20,9 @@ msg['Subject'] = assunto
 # Anexar o corpo do e-mail
 msg.attach(MIMEText(corpo, 'plain'))
 
-# Configuração do servidor SMTP
+# Configuração do servidor SMTP para o Outlook
 try:
-    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server = smtplib.SMTP('smtp.office365.com', 587)
     server.starttls()  # Encriptar a conexão
     server.login(email_de, senha)
 
