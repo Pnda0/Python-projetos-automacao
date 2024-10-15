@@ -1,80 +1,37 @@
-from cgitb import text
-import email
 import smtplib
-from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from email.mime.application import MIMEApplication
-from imap_tools import MailBox, AND
-from email.mime.base import MIMEBase
-from email import encoders
+from email.mime.multipart import MIMEMultipart
 
-# DADOS
+# Informações do remetente e do destinatário
+email_de = "seu_email@gmail.com"
+email_para = "destinatario_email@gmail.com"
+senha = "sua_senha"
 
-email_from = 'seu email'
-email_password = 'sua senha'
-email_smtp_server = 'smtp.office365.com'
+# Criação da mensagem
+assunto = "Assunto do E-mail"
+corpo = "Olá, esta é uma mensagem simples enviada por Python."
 
-# Destino
-destination = ['email do destino']
-
-# Assunto
-subject = 'Assunto'
-
-# Formatar cabeçalho do e-mail
+# Configuração da mensagem MIME
 msg = MIMEMultipart()
-msg['From'] = email_from
-msg['Subject'] = subject
-msg['To'] = 'emaildoremetente@hotmail.com'
-# Corpo do e-mail
-text = f'''Corpo do e-mail'''
+msg['From'] = email_de
+msg['To'] = email_para
+msg['Subject'] = assunto
 
-# Habilitando formato HTML
-msg_text = MIMEText(text, 'html')
+# Anexar o corpo do e-mail
+msg.attach(MIMEText(corpo, 'plain'))
 
-# Anexando a mensagem
-msg.attach(msg_text)
-
-# Abrindo Planilha em excel
-anexo = r'C:\Users\Padrao\Downloads\excel.xlsx'
-attachment = open(anexo, 'rb')
-
-# Lendo planilha em encode 64
-att = MIMEBase('aplication', 'octet-stream')
-att.set_payload(attachment.read())
-encoders.encode_base64(att)
-
-# Adicionando um cabeçalho ao anexo
-att.add_header('Content-Disposition',f'attachment; filename=dfpronto22.xlsx')
-attachment.close()
-# Anexando de fato
-msg.attach(att)
-
-
+# Configuração do servidor SMTP
 try:
-    # Enviando
-    smtp = smtplib.SMTP(email_smtp_server, 587)
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()  # Encriptar a conexão
+    server.login(email_de, senha)
 
-    # Se identificando ao servidor
+    # Envio da mensagem
+    texto = msg.as_string()
+    server.sendmail(email_de, email_para, texto)
 
-    smtp.ehlo()
-
-    # Iniciando uma conexão segura e se identificar novamente
-    smtp.starttls()
-    smtp.ehlo()
-
-    # Logando
-    smtp.login(email_from, email_password)
-
-    # Enviar 
-    smtp.sendmail(email_from, msg['To'], msg.as_string())
-
-    # Encerrar conexão
-    smtp.quit()
-    print('E-mail enviado!')
-except Exception as erro:
-    print(f'Falha ao enviar e-mail:{erro}')
-
-
-
-
-
+    print("E-mail enviado com sucesso!")
+except Exception as e:
+    print(f"Erro ao enviar o e-mail: {e}")
+finally:
+    server.quit()
