@@ -1,4 +1,4 @@
-# Alguns desenvolvimentos legais ;)
+# Alguns desenvolvimentos legais
 
 
 <h1>  ✂️ 1# Print de Tela. </h1>
